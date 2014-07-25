@@ -1,0 +1,144 @@
++ rc=/home/hpcsriv1/jaya/git_24July/RC/MS1/assignment/d1/cloud
+++ pwd
++ PWD=/home/hpcsriv1/jaya/git_24July/RC/MS1/assignment/d1
+++ pwd
++ echo 'Current directory: /home/hpcsriv1/jaya/git_24July/RC/MS1/assignment/d1'
+Current directory: /home/hpcsriv1/jaya/git_24July/RC/MS1/assignment/d1
++ JOBID=533373
++ echo -e 'JobID: 533373\n======'
+JobID: 533373
+======
+++ date
++ echo 'Time: Fri Jul 25 08:23:50 BST 2014'
+Time: Fri Jul 25 08:23:50 BST 2014
+++ hostname
++ echo 'Running on master node: tesla2'
+Running on master node: tesla2
++ '[' 'tesla[2-5]' ']'
+++ generate_pbs_nodefile
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = "UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
++ export NODEFILE=/tmp/SnM84mDqCF
++ NODEFILE=/tmp/SnM84mDqCF
++ cat /tmp/SnM84mDqCF
++ uniq
++ echo -e '\nNodes allocated:\n================'
+
+Nodes allocated:
+================
+++ cat /home/hpcsriv1/jaya/git_24July/RC/MS1/assignment/d1/machine.file.533373
+++ sed -e 's/\..*$//g'
++ echo tesla2 tesla3 tesla4 tesla5
+tesla2 tesla3 tesla4 tesla5
++ slurmJobNodeList=/home/hpcsriv1/jaya/git_24July/RC/MS1/assignment/d1/machine.file.533373
++ /home/hpcsriv1/jaya/git_24July/RC/MS1/assignment/d1/dna_common.sh dna_check_rc /home/hpcsriv1/jaya/git_24July/RC/MS1/assignment/d1/machine.file.533373 533373 /home/hpcsriv1/jaya/git_24July/RC/MS1/assignment/d1/cloud
++ '[' 0 -eq 0 ']'
++ echo -e 'dna_check_rc performed!!'
+dna_check_rc performed!!
++ /home/hpcsriv1/jaya/git_24July/RC/MS1/assignment/d1/dna_common.sh generatingCADFile /home/hpcsriv1/jaya/git_24July/RC/MS1/assignment/d1/machine.file.533373 533373 ''
+Generating CAD File
+============
+
+tesla2:6010 tesla3:6011 tesla4:6012 tesla5:6013
++ '[' 0 -eq 0 ']'
++ echo -e 'generatingCADFile performed!!'
+generatingCADFile performed!!
++ /home/hpcsriv1/jaya/git_24July/RC/MS1/assignment/d1/dna_common.sh md5sum 0 0
++ '[' 0 -eq 0 ']'
++ echo -e 'md5sum performed!!'
+md5sum performed!!
++ /home/hpcsriv1/jaya/git_24July/RC/MS1/assignment/d1/dna_common.sh startingCHprocess /home/hpcsriv1/jaya/git_24July/RC/MS1/assignment/d1/machine.file.533373 533373 /home/hpcsriv1/jaya/git_24July/RC/MS1/assignment/d1/cloud
+
+============
+CH Process initiated
+============
+
+Skip Master node IP
+============
+
+Sleeping for 2 secs!!
+
+============
+Starting Slave==<10.143.60.3>=====<6011>=====
+============
+
+cloud: bind: resource busy (Address already in use)
+cloud: bind: resource busy (Address already in use)
+cloud: bind: resource busy (Address already in use)
+srun: error: tesla3: tasks 0-2: Exited with exit code 1
+Sleeping for 2 secs!!
+
+============
+Starting Slave==<10.143.60.4>=====<6012>=====
+============
+
+cloud: bind: resource busy (Address already in use)
+cloud: bind: resource busy (Address already in use)
+cloud: bind: resource busy (Address already in use)
+srun: error: tesla4: tasks 0-1,3: Exited with exit code 1
+Sleeping for 2 secs!!
+
+============
+Starting Slave==<10.143.60.5>=====<6013>=====
+============
+
+cloud: bind: resource busy (Address already in use)
+cloud: bind: resource busy (Address already in use)
+cloud: bind: resource busy (Address already in use)
+srun: error: tesla5: tasks 0-2: Exited with exit code 1
+Sleeping for 2 secs!!
+
+============
+Starting Master====<10.143.60.2>=====<6010>=====
+============
+
+cloud: bind: resource busy (Address already in use)
+cloud: bind: resource busy (Address already in use)
+cloud: bind: resource busy (Address already in use)
+srun: error: tesla2: tasks 0-1,3: Exited with exit code 1
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.2:6010:0:3: [Master] : Master Initiated !! :pid://10.143.60.2:6010:0:3
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.2:6010:0:3: [Master] : Spawning CH process on Collector Node :nid://10.143.60.3:6011:0
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.2:6010:0:3: --------------------------------------------------------------------------------------
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.2:6010:0:3: [Master] : Spawning CH process on Compute Node :nid://10.143.60.4:6012:0
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.2:6010:0:3: [Master] : Spawning CH process on Compute Node :nid://10.143.60.5:6013:0
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.2:6010:0:3: [Master-Compute]: Pinging Compute Node pid://10.143.60.4:6012:0:4
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.4:6012:0:4: [Compute] : Waiting for master instruction!! :pid://10.143.60.4:6012:0:4
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.4:6012:0:4: [Compute] : itemCount :200 
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.4:6012:0:4: [Compute] : Ping from PID :pid://10.143.60.2:6010:0:3 on compute: pid://10.143.60.4:6012:0:4
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.4:6012:0:4: [Compute] : Ready for further computation :pid://10.143.60.4:6012:0:4
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.4:6012:0:4: [Compute] : Value of chunkOffset : [[0]] at pid://10.143.60.4:6012:0:4
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.4:6012:0:4: [Compute] : Value of chunkSize : [[100]] at pid://10.143.60.4:6012:0:4
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.4:6012:0:4: [Compute] : Value of iov: fromList [1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0] at pid://10.143.60.4:6012:0:4
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.2:6010:0:3: [Master-Compute] : Received Ack for further computation from Compute :pid://10.143.60.4:6012:0:4
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.2:6010:0:3: [Master-Compute]: Pinging Compute Node pid://10.143.60.5:6013:0:4
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.5:6013:0:4: [Compute] : Waiting for master instruction!! :pid://10.143.60.5:6013:0:4
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.5:6013:0:4: [Compute] : itemCount :200 
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.5:6013:0:4: [Compute] : Ping from PID :pid://10.143.60.2:6010:0:3 on compute: pid://10.143.60.5:6013:0:4
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.5:6013:0:4: [Compute] : Ready for further computation :pid://10.143.60.5:6013:0:4
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.5:6013:0:4: [Compute] : Value of chunkOffset : [[100]] at pid://10.143.60.5:6013:0:4
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.5:6013:0:4: [Compute] : Value of chunkSize : [[100]] at pid://10.143.60.5:6013:0:4
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.5:6013:0:4: [Compute] : Value of iov: fromList [5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315,5.299808824e-315] at pid://10.143.60.5:6013:0:4
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.2:6010:0:3: [Master-Compute] : Received Ack for further computation from Compute :pid://10.143.60.5:6013:0:4
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.3:6011:0:4: [Collector] : Waiting for master instruction!! : pid://10.143.60.3:6011:0:4
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.4:6012:0:4: [Compute] : sumOnComputeNode : 100.0 at pid://10.143.60.4:6012:0:4
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.4:6012:0:4: [Compute] : Sending results to Controller : pid://10.143.60.3:6011:0:4
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.5:6013:0:4: [Compute] : sumOnComputeNode : 5.29980882363e-313 at pid://10.143.60.5:6013:0:4
+Fri Jul 25 07:24:01 UTC 2014 pid://10.143.60.5:6013:0:4: [Compute] : Sending results to Controller : pid://10.143.60.3:6011:0:4
+itemcount:  200
+Offsets : [0,100]
+chunkSizes : [100,100]
+
+============
+CH Process initiation completed
+============
+
++ '[' 0 -eq 0 ']'
++ echo -e 'startingCHprocess performed!!'
+startingCHprocess performed!!
++ wait
